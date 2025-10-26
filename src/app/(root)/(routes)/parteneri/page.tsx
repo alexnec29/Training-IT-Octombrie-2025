@@ -11,8 +11,8 @@ const PartnersPage: FC = async () => {
   return (
     <CardHolder>
       { cards.map((card: any) => (
-        <Card>
-          <CardHeader>
+        <Card className="flex flex-col justify-center items-center">
+          <CardHeader className="flex justify-center items-center">
             <Image src={card.imageUrl} width="100" height="100"></Image>
             <CardTitle><a href={card.url}>{card.name}</a></CardTitle>
           </CardHeader>
