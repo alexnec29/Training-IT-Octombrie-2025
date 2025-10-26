@@ -69,8 +69,7 @@ const MainFooter: FC<MainFooterProps> = ({}) => {
           </Link>
         </span>
         <span>
-          <div className="inline-block rotate-180">©</div>
-          {new Date().getFullYear()} FII Practic
+          Ati auzit de FII ITist?
         </span>
       </div>
     </footer>
