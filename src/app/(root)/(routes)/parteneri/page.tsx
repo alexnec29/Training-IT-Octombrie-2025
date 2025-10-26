@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import type { FC } from "react";
+import CardHolder from "./CardHolder";
 
 const PartnersPage: FC = async () => {
   const url = process.env.NEXT_PUBLIC_APP_URL + "/api/parteneri";
@@ -8,17 +9,17 @@ const PartnersPage: FC = async () => {
   const cards = await res.json();
 
   return (
-    <div>
+    <CardHolder>
       <Card>
         <CardHeader>
-          <CardTitle>{/* Title me pls */}</CardTitle>
+          <CardTitle>Parteneri</CardTitle>
           <CardContent>
-            <Image />
+            {/* <Image /> */}
             <b>test</b>
           </CardContent>
         </CardHeader>
       </Card>
-    </div>
+    </CardHolder>
   );
 };
 
