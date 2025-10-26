@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import type { FC } from "react";
+import data from "../../../../../data_ex.json";
 
 // Mock data pentru traineri (va fi înlocuită cu fetch din task 1)
 const mockTrainers = [
@@ -20,6 +21,12 @@ const mockTrainers = [
 ];
 
 const TrainersPage: FC = async () => {
+
+    const responose = await fetch('http://localhost:3000/api/traineri');
+    const user = await responose.json();
+
+    console.log(user);
+
   return (
     <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
