@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import type { FC } from "react";
 import CardHolder from "./CardHolder";
@@ -10,15 +10,18 @@ const PartnersPage: FC = async () => {
 
   return (
     <CardHolder>
-      <Card>
-        <CardHeader>
-          <CardTitle>Parteneri</CardTitle>
+      { cards.map((card: any) => (
+        <Card>
+          <CardHeader>
+            <Image src={card.imageUrl} width="100" height="100"></Image>
+            <CardTitle><a href={card.url}>{card.name}</a></CardTitle>
+          </CardHeader>
+
           <CardContent>
-            {/* <Image /> */}
-            <b>test</b>
+            {card.tier}
           </CardContent>
-        </CardHeader>
-      </Card>
+        </Card>
+      )) }
     </CardHolder>
   );
 };
